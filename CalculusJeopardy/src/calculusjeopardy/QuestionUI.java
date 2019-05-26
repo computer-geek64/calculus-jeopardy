@@ -47,6 +47,7 @@ public class QuestionUI extends javax.swing.JFrame {
         incorrect2 = new javax.swing.JButton();
         correct3 = new javax.swing.JButton();
         incorrect3 = new javax.swing.JButton();
+        answer = new javax.swing.JButton();
         timerLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -125,6 +126,16 @@ public class QuestionUI extends javax.swing.JFrame {
         });
         buttonPanel.add(incorrect3);
 
+        answer.setBackground(new java.awt.Color(0, 0, 255));
+        answer.setForeground(new java.awt.Color(255, 255, 255));
+        answer.setText("Answer");
+        answer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                answerActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(answer);
+
         timerLabel.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         timerLabel.setForeground(new java.awt.Color(255, 255, 255));
         timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -169,58 +180,88 @@ public class QuestionUI extends javax.swing.JFrame {
 
     private void correct1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct1ActionPerformed
         // TODO add your handling code here:
+        correct1.setEnabled(false);
+        incorrect1.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[0] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[0] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
             closeQuestion();
+        }
+        else {
+            CalculusJeopardy.scores[0] += CalculusJeopardy.finalJeopardyBets[0];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_correct1ActionPerformed
 
     private void incorrect1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect1ActionPerformed
         // TODO add your handling code here:
+        correct1.setEnabled(false);
+        incorrect1.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[0] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[0] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
-            correct1.setEnabled(false);
-            incorrect1.setEnabled(false);
+        }
+        else {
+            CalculusJeopardy.scores[0] -= CalculusJeopardy.finalJeopardyBets[0];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_incorrect1ActionPerformed
 
     private void correct2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct2ActionPerformed
         // TODO add your handling code here:
+        correct2.setEnabled(false);
+        incorrect2.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[1] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[1] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
             closeQuestion();
+        }
+        else {
+            CalculusJeopardy.scores[1] += CalculusJeopardy.finalJeopardyBets[1];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_correct2ActionPerformed
 
     private void incorrect2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect2ActionPerformed
         // TODO add your handling code here:
+        correct2.setEnabled(false);
+        incorrect2.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[1] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[1] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
-            correct2.setEnabled(false);
-            incorrect2.setEnabled(false);
+        }
+        else {
+            CalculusJeopardy.scores[1] -= CalculusJeopardy.finalJeopardyBets[1];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_incorrect2ActionPerformed
 
     private void correct3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct3ActionPerformed
         // TODO add your handling code here:
+        correct3.setEnabled(false);
+        incorrect3.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[2] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[2] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
             closeQuestion();
+        }
+        else {
+            CalculusJeopardy.scores[2] += CalculusJeopardy.finalJeopardyBets[2];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_correct3ActionPerformed
 
     private void incorrect3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect3ActionPerformed
         // TODO add your handling code here:
+        correct3.setEnabled(false);
+        incorrect3.setEnabled(false);
         if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[2] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.scores[2] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
             CalculusJeopardy.updateScores();
-            correct3.setEnabled(false);
-            incorrect3.setEnabled(false);
+        }
+        else {
+            CalculusJeopardy.scores[2] -= CalculusJeopardy.finalJeopardyBets[2];
+            CalculusJeopardy.updateScores();
         }
     }//GEN-LAST:event_incorrect3ActionPerformed
 
@@ -239,7 +280,6 @@ public class QuestionUI extends javax.swing.JFrame {
                     timerLabel.setText("<html><br><br>0:" + timeString + "</html>");
                     if(timeRemaining == 0) {
                         timerLabel.setForeground(Color.RED);
-                        timerScheduled = false;
                         cancel();
                     }
                     timeRemaining--;
@@ -253,20 +293,40 @@ public class QuestionUI extends javax.swing.JFrame {
                 int timeRemaining = 59;
                 @Override
                 public void run() {
+                    System.out.println(timeRemaining);
                     String timeString = timeRemaining < 10 ? "0" + timeRemaining : "" + timeRemaining;
                     timerLabel.setText("<html><br><br>0:" + timeString + "</html>");
                     if(timeRemaining == 0) {
                         timerLabel.setForeground(Color.RED);
-                        timerScheduled = false;
                         cancel();
                     }
                     timeRemaining--;
                 }
             };
+            timer.scheduleAtFixedRate(timerTask, 1000, 1000);
         }
     }//GEN-LAST:event_timerLabelMouseClicked
 
+    private void answerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerActionPerformed
+        // TODO add your handling code here:
+        correct1.setEnabled(false);
+        incorrect1.setEnabled(false);
+        correct2.setEnabled(false);
+        incorrect2.setEnabled(false);
+        correct3.setEnabled(false);
+        incorrect3.setEnabled(false);
+        String answerString = "<html><center>" + (CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyAnswer : CalculusJeopardy.answers[CalculusJeopardy.currentQuestion[0]][CalculusJeopardy.currentQuestion[1]]) + "</center></html>";
+        JOptionPane.showMessageDialog(null, answerString, "Answer", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_answerActionPerformed
+
     private void closeQuestion() {
+        if(CalculusJeopardy.isFinalJeopardy) {
+            JOptionPane.showMessageDialog(null, "Developed by Ashish D'Souza and Matthew Weis", "Thank you", JOptionPane.PLAIN_MESSAGE);
+            setVisible(false);
+            CalculusJeopardy.frame.setVisible(false);
+            CalculusJeopardy.frame3.setVisible(false);
+            System.exit(0);
+        }
         correct1.setEnabled(true);
         incorrect1.setEnabled(true);
         correct2.setEnabled(true);
@@ -314,7 +374,7 @@ public class QuestionUI extends javax.swing.JFrame {
         }
         
         // Set up question
-        question.setText(CalculusJeopardy.finalJeopardyQuestion);
+        question.setText("<html><center>" + CalculusJeopardy.finalJeopardyQuestion + "</center></html>");
         setVisible(true);
     }
     
@@ -354,6 +414,7 @@ public class QuestionUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton answer;
     public javax.swing.JPanel buttonPanel;
     public javax.swing.JButton correct1;
     public javax.swing.JButton correct2;
