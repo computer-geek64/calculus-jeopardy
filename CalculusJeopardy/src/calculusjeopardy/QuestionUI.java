@@ -6,8 +6,10 @@
 package calculusjeopardy;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 
@@ -179,90 +181,77 @@ public class QuestionUI extends javax.swing.JFrame {
     }//GEN-LAST:event_questionMouseClicked
 
     private void correct1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:        
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            correct2.setEnabled(false);
+            incorrect2.setEnabled(false);
+            correct3.setEnabled(false);
+            incorrect3.setEnabled(false);
+        }
+        
         correct1.setEnabled(false);
         incorrect1.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[0] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-            closeQuestion();
-        }
-        else {
-            CalculusJeopardy.scores[0] += CalculusJeopardy.finalJeopardyBets[0];
-            CalculusJeopardy.updateScores();
-        }
+        
+        CalculusJeopardy.scores[0] += CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[0] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_correct1ActionPerformed
 
     private void incorrect1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect1ActionPerformed
         // TODO add your handling code here:
         correct1.setEnabled(false);
         incorrect1.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[0] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-        }
-        else {
-            CalculusJeopardy.scores[0] -= CalculusJeopardy.finalJeopardyBets[0];
-            CalculusJeopardy.updateScores();
-        }
+        
+        CalculusJeopardy.scores[0] -= CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[0] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_incorrect1ActionPerformed
 
     private void correct2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct2ActionPerformed
         // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            correct1.setEnabled(false);
+            incorrect1.setEnabled(false);
+            correct3.setEnabled(false);
+            incorrect3.setEnabled(false);
+        }
         correct2.setEnabled(false);
         incorrect2.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[1] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-            closeQuestion();
-        }
-        else {
-            CalculusJeopardy.scores[1] += CalculusJeopardy.finalJeopardyBets[1];
-            CalculusJeopardy.updateScores();
-        }
+        
+        
+        CalculusJeopardy.scores[1] += CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[1] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_correct2ActionPerformed
 
     private void incorrect2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect2ActionPerformed
         // TODO add your handling code here:
         correct2.setEnabled(false);
         incorrect2.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[1] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-        }
-        else {
-            CalculusJeopardy.scores[1] -= CalculusJeopardy.finalJeopardyBets[1];
-            CalculusJeopardy.updateScores();
-        }
+        
+        CalculusJeopardy.scores[1] -= CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[1] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_incorrect2ActionPerformed
 
     private void correct3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct3ActionPerformed
         // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            correct1.setEnabled(false);
+            incorrect1.setEnabled(false);
+            correct2.setEnabled(false);
+            incorrect2.setEnabled(false);
+        }
         correct3.setEnabled(false);
         incorrect3.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[2] += (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-            closeQuestion();
-        }
-        else {
-            CalculusJeopardy.scores[2] += CalculusJeopardy.finalJeopardyBets[2];
-            CalculusJeopardy.updateScores();
-        }
+        
+        CalculusJeopardy.scores[2] += CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[2] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_correct3ActionPerformed
 
     private void incorrect3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect3ActionPerformed
         // TODO add your handling code here:
         correct3.setEnabled(false);
         incorrect3.setEnabled(false);
-        if(!CalculusJeopardy.isFinalJeopardy) {
-            CalculusJeopardy.scores[2] -= (CalculusJeopardy.currentQuestion[0] + 1) * 200;
-            CalculusJeopardy.updateScores();
-        }
-        else {
-            CalculusJeopardy.scores[2] -= CalculusJeopardy.finalJeopardyBets[2];
-            CalculusJeopardy.updateScores();
-        }
+        
+        CalculusJeopardy.scores[2] -= CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyBets[2] : (CalculusJeopardy.currentQuestion[0] + 1) * 200;
+        CalculusJeopardy.updateScores();
     }//GEN-LAST:event_incorrect3ActionPerformed
 
     private void timerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_timerLabelMouseClicked
@@ -293,7 +282,6 @@ public class QuestionUI extends javax.swing.JFrame {
                 int timeRemaining = 59;
                 @Override
                 public void run() {
-                    System.out.println(timeRemaining);
                     String timeString = timeRemaining < 10 ? "0" + timeRemaining : "" + timeRemaining;
                     timerLabel.setText("<html><br><br>0:" + timeString + "</html>");
                     if(timeRemaining == 0) {
@@ -316,7 +304,7 @@ public class QuestionUI extends javax.swing.JFrame {
         correct3.setEnabled(false);
         incorrect3.setEnabled(false);
         String answerString = "<html><center>" + (CalculusJeopardy.isFinalJeopardy ? CalculusJeopardy.finalJeopardyAnswer : CalculusJeopardy.answers[CalculusJeopardy.currentQuestion[0]][CalculusJeopardy.currentQuestion[1]]) + "</center></html>";
-        JOptionPane.showMessageDialog(null, answerString, "Answer", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, new JLabel(answerString, JLabel.CENTER), "Answer", JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_answerActionPerformed
 
     private void closeQuestion() {
@@ -349,6 +337,10 @@ public class QuestionUI extends javax.swing.JFrame {
         CalculusJeopardy.isFinalJeopardy = true;
         CalculusJeopardy.frame.setVisible(false);
         
+        JLabel finalJeopardyLabel = new JLabel("FINAL JEOPARDY: LIMITS", JLabel.CENTER);
+        finalJeopardyLabel.setFont(new Font("Serif", Font.PLAIN, 36));
+        JOptionPane.showMessageDialog(null, finalJeopardyLabel, "Final Jeopardy", JOptionPane.PLAIN_MESSAGE);
+        
         // Get Final Jeopardy Bets
         for(int i = 0; i < CalculusJeopardy.finalJeopardyBets.length; i++) {
             JPasswordField password = new JPasswordField();
@@ -358,7 +350,7 @@ public class QuestionUI extends javax.swing.JFrame {
             }
             // String newBet = JOptionPane.showInputDialog(null, "Enter " + CalculusJeopardy.contestants[i] + "\'s bet for Final Jeopardy:", "Final Jeopardy Bet", JOptionPane.QUESTION_MESSAGE);
             while(newBet == null || newBet.equals("")) {
-                JOptionPane.showMessageDialog(null, "Invalid bet entered.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, new JLabel("Invalid bet entered.", JLabel.CENTER), "ERROR", JOptionPane.ERROR_MESSAGE);
                 if(JOptionPane.showConfirmDialog(null, password, CalculusJeopardy.contestants[i] + "\'s Final Jeopardy Bet", JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION) {
                     newBet = password.getText();
                 }
@@ -368,7 +360,7 @@ public class QuestionUI extends javax.swing.JFrame {
                 CalculusJeopardy.finalJeopardyBets[i] = Integer.parseInt(newBet);
             }
             catch(NumberFormatException ex) {
-                JOptionPane.showMessageDialog(null, "Invalid bet entered.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, new JLabel("Invalid bet entered.", JLabel.CENTER), "ERROR", JOptionPane.ERROR_MESSAGE);
                 i--;
             }
         }

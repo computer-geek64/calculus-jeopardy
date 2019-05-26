@@ -9,6 +9,7 @@ import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 public class CalculusJeopardy {
@@ -70,7 +71,7 @@ public class CalculusJeopardy {
         for(int i = 0; i < contestants.length; i++) {
             String newName = JOptionPane.showInputDialog(null, "Enter name for contestant #" + (i+1) + ":", "Contestant #" + (i+1), JOptionPane.QUESTION_MESSAGE);
             while(newName == null || newName.equals("")) {
-                JOptionPane.showMessageDialog(null, "Invalid name entered.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, new JLabel("Invalid name entered.", JLabel.CENTER), "ERROR", JOptionPane.ERROR_MESSAGE);
                 newName = JOptionPane.showInputDialog(null, "Enter name for contestant #" + (i+1) + ":", "Contestant #" + (i+1), JOptionPane.QUESTION_MESSAGE);
             }
             contestants[i] = newName;
