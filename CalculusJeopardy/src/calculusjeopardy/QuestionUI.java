@@ -5,17 +5,29 @@
  */
 package calculusjeopardy;
 
+import java.awt.Color;
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+
 /**
  *
  * @author root
  */
 public class QuestionUI extends javax.swing.JFrame {
 
+    public Timer timer;
+    public boolean timerScheduled;
+    public TimerTask timerTask;
+    
     /**
      * Creates new form QuestionUI
      */
     public QuestionUI() {
         initComponents();
+        timer = new Timer();
+        timerScheduled = false;
     }
 
     /**
@@ -28,14 +40,98 @@ public class QuestionUI extends javax.swing.JFrame {
     private void initComponents() {
 
         question = new javax.swing.JLabel();
+        buttonPanel = new javax.swing.JPanel();
+        correct1 = new javax.swing.JButton();
+        incorrect1 = new javax.swing.JButton();
+        correct2 = new javax.swing.JButton();
+        incorrect2 = new javax.swing.JButton();
+        correct3 = new javax.swing.JButton();
+        incorrect3 = new javax.swing.JButton();
+        timerLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        question.setBackground(new java.awt.Color(6, 12, 233));
+        question.setFont(new java.awt.Font("Dialog", 1, 64)); // NOI18N
+        question.setForeground(new java.awt.Color(255, 255, 255));
         question.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         question.setText("Question");
         question.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 questionMouseClicked(evt);
+            }
+        });
+
+        buttonPanel.setOpaque(false);
+        buttonPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 10));
+
+        correct1.setBackground(new java.awt.Color(0, 255, 0));
+        correct1.setForeground(new java.awt.Color(0, 0, 0));
+        correct1.setText("#1 Correct");
+        correct1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correct1ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(correct1);
+
+        incorrect1.setBackground(new java.awt.Color(255, 0, 0));
+        incorrect1.setForeground(new java.awt.Color(255, 255, 255));
+        incorrect1.setText("#1 Incorrect");
+        incorrect1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                incorrect1ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(incorrect1);
+
+        correct2.setBackground(new java.awt.Color(0, 255, 0));
+        correct2.setForeground(new java.awt.Color(0, 0, 0));
+        correct2.setText("#2 Correct");
+        correct2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correct2ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(correct2);
+
+        incorrect2.setBackground(new java.awt.Color(255, 0, 0));
+        incorrect2.setForeground(new java.awt.Color(255, 255, 255));
+        incorrect2.setText("#2 Incorrect");
+        incorrect2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                incorrect2ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(incorrect2);
+
+        correct3.setBackground(new java.awt.Color(0, 255, 0));
+        correct3.setForeground(new java.awt.Color(0, 0, 0));
+        correct3.setText("#3 Correct");
+        correct3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                correct3ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(correct3);
+
+        incorrect3.setBackground(new java.awt.Color(255, 0, 0));
+        incorrect3.setForeground(new java.awt.Color(255, 255, 255));
+        incorrect3.setText("#3 Incorrect");
+        incorrect3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                incorrect3ActionPerformed(evt);
+            }
+        });
+        buttonPanel.add(incorrect3);
+
+        timerLabel.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        timerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        timerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timerLabel.setText("<html><br><br>Timer</html>");
+        timerLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                timerLabelMouseClicked(evt);
             }
         });
 
@@ -45,14 +141,21 @@ public class QuestionUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(timerLabel))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                .addComponent(timerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(question, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -61,10 +164,160 @@ public class QuestionUI extends javax.swing.JFrame {
 
     private void questionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_questionMouseClicked
         // TODO add your handling code here:
-        setVisible(false);
-        CalculusJeopardy.frame.setVisible(true);
+        closeQuestion();
     }//GEN-LAST:event_questionMouseClicked
 
+    private void correct1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct1ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[0] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            closeQuestion();
+        }
+    }//GEN-LAST:event_correct1ActionPerformed
+
+    private void incorrect1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect1ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[0] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            correct1.setEnabled(false);
+            incorrect1.setEnabled(false);
+        }
+    }//GEN-LAST:event_incorrect1ActionPerformed
+
+    private void correct2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct2ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[1] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            closeQuestion();
+        }
+    }//GEN-LAST:event_correct2ActionPerformed
+
+    private void incorrect2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect2ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[1] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            correct2.setEnabled(false);
+            incorrect2.setEnabled(false);
+        }
+    }//GEN-LAST:event_incorrect2ActionPerformed
+
+    private void correct3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_correct3ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[2] += 200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            closeQuestion();
+        }
+    }//GEN-LAST:event_correct3ActionPerformed
+
+    private void incorrect3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incorrect3ActionPerformed
+        // TODO add your handling code here:
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            CalculusJeopardy.scores[2] += -200 * (CalculusJeopardy.currentQuestion[0] + 1);
+            CalculusJeopardy.updateScores();
+            correct3.setEnabled(false);
+            incorrect3.setEnabled(false);
+        }
+    }//GEN-LAST:event_incorrect3ActionPerformed
+
+    private void timerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_timerLabelMouseClicked
+        // TODO add your handling code here:
+        if(timerScheduled) {
+            return;
+        }
+        timerScheduled = true;
+        if(!CalculusJeopardy.isFinalJeopardy) {
+            timerTask = new TimerTask() {
+                int timeRemaining = 30;
+                @Override
+                public void run() {
+                    String timeString = timeRemaining < 10 ? "0" + timeRemaining : "" + timeRemaining;
+                    timerLabel.setText("<html><br><br>0:" + timeString + "</html>");
+                    if(timeRemaining == 0) {
+                        timerLabel.setForeground(Color.RED);
+                        timerScheduled = false;
+                        cancel();
+                    }
+                    timeRemaining--;
+                }
+            };
+            timer.scheduleAtFixedRate(timerTask, 0, 1000);
+        }
+        else {
+            timerLabel.setText("<html><br><br>1:00</html>");
+            timerTask = new TimerTask() {
+                int timeRemaining = 59;
+                @Override
+                public void run() {
+                    String timeString = timeRemaining < 10 ? "0" + timeRemaining : "" + timeRemaining;
+                    timerLabel.setText("<html><br><br>0:" + timeString + "</html>");
+                    if(timeRemaining == 0) {
+                        timerLabel.setForeground(Color.RED);
+                        timerScheduled = false;
+                        cancel();
+                    }
+                    timeRemaining--;
+                }
+            };
+        }
+    }//GEN-LAST:event_timerLabelMouseClicked
+
+    private void closeQuestion() {
+        correct1.setEnabled(true);
+        incorrect1.setEnabled(true);
+        correct2.setEnabled(true);
+        incorrect2.setEnabled(true);
+        correct3.setEnabled(true);
+        incorrect3.setEnabled(true);
+        
+        timerLabel.setForeground(Color.WHITE);
+        timerLabel.setText("<html><br><br>Timer</html>");
+        if(timerScheduled) {
+            timerTask.cancel();
+            timerScheduled = false;
+        }
+        
+        setVisible(false);
+        if(CalculusJeopardy.totalQuestions < 20) {
+            CalculusJeopardy.frame.setVisible(true);
+            return;
+        }
+        CalculusJeopardy.isFinalJeopardy = true;
+        CalculusJeopardy.frame.setVisible(false);
+        
+        // Get Final Jeopardy Bets
+        for(int i = 0; i < CalculusJeopardy.finalJeopardyBets.length; i++) {
+            JPasswordField password = new JPasswordField();
+            String newBet = "";
+            if(JOptionPane.showConfirmDialog(null, password, CalculusJeopardy.contestants[i] + "\'s Final Jeopardy Bet", JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION) {
+                newBet = password.getText();
+            }
+            // String newBet = JOptionPane.showInputDialog(null, "Enter " + CalculusJeopardy.contestants[i] + "\'s bet for Final Jeopardy:", "Final Jeopardy Bet", JOptionPane.QUESTION_MESSAGE);
+            while(newBet == null || newBet.equals("")) {
+                JOptionPane.showMessageDialog(null, "Invalid bet entered.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                if(JOptionPane.showConfirmDialog(null, password, CalculusJeopardy.contestants[i] + "\'s Final Jeopardy Bet", JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION) {
+                    newBet = password.getText();
+                }
+                // newBet = JOptionPane.showInputDialog(null, "Enter " + CalculusJeopardy.contestants[i] + "\'s bet for Final Jeopardy:", "Final Jeopardy Bet", JOptionPane.QUESTION_MESSAGE);
+            }
+            try {
+                CalculusJeopardy.finalJeopardyBets[i] = Integer.parseInt(newBet);
+            }
+            catch(NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Invalid bet entered.", "ERROR", JOptionPane.ERROR_MESSAGE);
+                i--;
+            }
+        }
+        
+        // Set up question
+        question.setText(CalculusJeopardy.finalJeopardyQuestion);
+        setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -101,6 +354,14 @@ public class QuestionUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JPanel buttonPanel;
+    public javax.swing.JButton correct1;
+    public javax.swing.JButton correct2;
+    public javax.swing.JButton correct3;
+    public javax.swing.JButton incorrect1;
+    public javax.swing.JButton incorrect2;
+    public javax.swing.JButton incorrect3;
     public javax.swing.JLabel question;
+    public javax.swing.JLabel timerLabel;
     // End of variables declaration//GEN-END:variables
 }

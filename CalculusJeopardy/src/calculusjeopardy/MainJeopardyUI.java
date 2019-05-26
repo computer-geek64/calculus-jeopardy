@@ -5,7 +5,6 @@
  */
 package calculusjeopardy;
 
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -131,6 +130,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         relativeExtrema200.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         relativeExtrema200.setText("<html><span style=\"font-family: impact;\">$200</span></html>");
         relativeExtrema200.setOpaque(true);
+        relativeExtrema200.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                relativeExtrema200MouseClicked(evt);
+            }
+        });
         container.add(relativeExtrema200);
 
         concavity200.setBackground(new java.awt.Color(6, 12, 233));
@@ -139,6 +143,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         concavity200.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         concavity200.setText("<html><span style=\"font-family: impact;\">$200</span></html>");
         concavity200.setOpaque(true);
+        concavity200.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                concavity200MouseClicked(evt);
+            }
+        });
         container.add(concavity200);
 
         derivatives400.setBackground(new java.awt.Color(6, 12, 233));
@@ -147,6 +156,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         derivatives400.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         derivatives400.setText("<html><span style=\"font-family: impact;\">$400</span></html>");
         derivatives400.setOpaque(true);
+        derivatives400.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                derivatives400MouseClicked(evt);
+            }
+        });
         container.add(derivatives400);
 
         integrals400.setBackground(new java.awt.Color(6, 12, 233));
@@ -155,6 +169,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         integrals400.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         integrals400.setText("<html><span style=\"font-family: impact;\">$400</span></html>");
         integrals400.setOpaque(true);
+        integrals400.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                integrals400MouseClicked(evt);
+            }
+        });
         container.add(integrals400);
 
         relativeExtrema400.setBackground(new java.awt.Color(6, 12, 233));
@@ -163,6 +182,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         relativeExtrema400.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         relativeExtrema400.setText("<html><span style=\"font-family: impact;\">$400</span></html>");
         relativeExtrema400.setOpaque(true);
+        relativeExtrema400.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                relativeExtrema400MouseClicked(evt);
+            }
+        });
         container.add(relativeExtrema400);
 
         concavity400.setBackground(new java.awt.Color(6, 12, 233));
@@ -171,6 +195,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         concavity400.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         concavity400.setText("<html><span style=\"font-family: impact;\">$400</span></html>");
         concavity400.setOpaque(true);
+        concavity400.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                concavity400MouseClicked(evt);
+            }
+        });
         container.add(concavity400);
 
         derivatives600.setBackground(new java.awt.Color(6, 12, 233));
@@ -179,6 +208,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         derivatives600.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         derivatives600.setText("<html><span style=\"font-family: impact;\">$600</span></html>");
         derivatives600.setOpaque(true);
+        derivatives600.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                derivatives600MouseClicked(evt);
+            }
+        });
         container.add(derivatives600);
 
         integrals600.setBackground(new java.awt.Color(6, 12, 233));
@@ -187,6 +221,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         integrals600.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         integrals600.setText("<html><span style=\"font-family: impact;\">$600</span></html>");
         integrals600.setOpaque(true);
+        integrals600.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                integrals600MouseClicked(evt);
+            }
+        });
         container.add(integrals600);
 
         relativeExtrema600.setBackground(new java.awt.Color(6, 12, 233));
@@ -195,6 +234,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         relativeExtrema600.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         relativeExtrema600.setText("<html><span style=\"font-family: impact;\">$600</span></html>");
         relativeExtrema600.setOpaque(true);
+        relativeExtrema600.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                relativeExtrema600MouseClicked(evt);
+            }
+        });
         container.add(relativeExtrema600);
 
         concavity600.setBackground(new java.awt.Color(6, 12, 233));
@@ -203,6 +247,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         concavity600.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         concavity600.setText("<html><span style=\"font-family: impact;\">$600</span></html>");
         concavity600.setOpaque(true);
+        concavity600.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                concavity600MouseClicked(evt);
+            }
+        });
         container.add(concavity600);
 
         derivatives800.setBackground(new java.awt.Color(6, 12, 233));
@@ -211,6 +260,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         derivatives800.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         derivatives800.setText("<html><span style=\"font-family: impact;\">$800</span></html>");
         derivatives800.setOpaque(true);
+        derivatives800.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                derivatives800MouseClicked(evt);
+            }
+        });
         container.add(derivatives800);
 
         integrals800.setBackground(new java.awt.Color(6, 12, 233));
@@ -219,6 +273,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         integrals800.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         integrals800.setText("<html><span style=\"font-family: impact;\">$800</span></html>");
         integrals800.setOpaque(true);
+        integrals800.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                integrals800MouseClicked(evt);
+            }
+        });
         container.add(integrals800);
 
         relativeExtrema800.setBackground(new java.awt.Color(6, 12, 233));
@@ -227,6 +286,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         relativeExtrema800.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         relativeExtrema800.setText("<html><span style=\"font-family: impact;\">$800</span></html>");
         relativeExtrema800.setOpaque(true);
+        relativeExtrema800.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                relativeExtrema800MouseClicked(evt);
+            }
+        });
         container.add(relativeExtrema800);
 
         concavity800.setBackground(new java.awt.Color(6, 12, 233));
@@ -235,6 +299,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         concavity800.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         concavity800.setText("<html><span style=\"font-family: impact;\">$800</span></html>");
         concavity800.setOpaque(true);
+        concavity800.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                concavity800MouseClicked(evt);
+            }
+        });
         container.add(concavity800);
 
         derivatives1000.setBackground(new java.awt.Color(6, 12, 233));
@@ -243,6 +312,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         derivatives1000.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         derivatives1000.setText("<html><span style=\"font-family: impact;\">$1000</span></html>");
         derivatives1000.setOpaque(true);
+        derivatives1000.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                derivatives1000MouseClicked(evt);
+            }
+        });
         container.add(derivatives1000);
 
         integrals1000.setBackground(new java.awt.Color(6, 12, 233));
@@ -251,6 +325,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         integrals1000.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         integrals1000.setText("<html><span style=\"font-family: impact;\">$1000</span></html>");
         integrals1000.setOpaque(true);
+        integrals1000.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                integrals1000MouseClicked(evt);
+            }
+        });
         container.add(integrals1000);
 
         relativeExtrema1000.setBackground(new java.awt.Color(6, 12, 233));
@@ -259,6 +338,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         relativeExtrema1000.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         relativeExtrema1000.setText("<html><span style=\"font-family: impact;\">$1000</span></html>");
         relativeExtrema1000.setOpaque(true);
+        relativeExtrema1000.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                relativeExtrema1000MouseClicked(evt);
+            }
+        });
         container.add(relativeExtrema1000);
 
         concavity1000.setBackground(new java.awt.Color(6, 12, 233));
@@ -267,6 +351,11 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         concavity1000.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         concavity1000.setText("<html><span style=\"font-family: impact;\">$1000</span></html>");
         concavity1000.setOpaque(true);
+        concavity1000.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                concavity1000MouseClicked(evt);
+            }
+        });
         container.add(concavity1000);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -301,6 +390,38 @@ public class MainJeopardyUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_derivatives200MouseClicked
 
+    private void derivatives400MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_derivatives400MouseClicked
+        // TODO add your handling code here:
+        if(!derivatives400.getText().equals("")) {
+            derivatives400.setText("");
+            displayQuestion(1, 0);
+        }
+    }//GEN-LAST:event_derivatives400MouseClicked
+
+    private void derivatives600MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_derivatives600MouseClicked
+        // TODO add your handling code here:
+        if(!derivatives600.getText().equals("")) {
+            derivatives600.setText("");
+            displayQuestion(2, 0);
+        }
+    }//GEN-LAST:event_derivatives600MouseClicked
+
+    private void derivatives800MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_derivatives800MouseClicked
+        // TODO add your handling code here:
+        if(!derivatives800.getText().equals("")) {
+            derivatives800.setText("");
+            displayQuestion(3, 0);
+        }
+    }//GEN-LAST:event_derivatives800MouseClicked
+
+    private void derivatives1000MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_derivatives1000MouseClicked
+        // TODO add your handling code here:
+        if(!derivatives1000.getText().equals("")) {
+            derivatives1000.setText("");
+            displayQuestion(4, 0);
+        }
+    }//GEN-LAST:event_derivatives1000MouseClicked
+
     private void integrals200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_integrals200MouseClicked
         // TODO add your handling code here:
         if(!integrals200.getText().equals("")) {
@@ -308,9 +429,124 @@ public class MainJeopardyUI extends javax.swing.JFrame {
             displayQuestion(0, 1);
         }
     }//GEN-LAST:event_integrals200MouseClicked
+
+    private void integrals400MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_integrals400MouseClicked
+        // TODO add your handling code here:
+        if(!integrals400.getText().equals("")) {
+            integrals400.setText("");
+            displayQuestion(1, 1);
+        }
+    }//GEN-LAST:event_integrals400MouseClicked
+
+    private void integrals600MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_integrals600MouseClicked
+        // TODO add your handling code here:
+        if(!integrals600.getText().equals("")) {
+            integrals600.setText("");
+            displayQuestion(2, 1);
+        }
+    }//GEN-LAST:event_integrals600MouseClicked
+
+    private void integrals800MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_integrals800MouseClicked
+        // TODO add your handling code here:
+        if(!integrals800.getText().equals("")) {
+            integrals800.setText("");
+            displayQuestion(3, 1);
+        }
+    }//GEN-LAST:event_integrals800MouseClicked
+
+    private void integrals1000MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_integrals1000MouseClicked
+        // TODO add your handling code here:
+        if(!integrals1000.getText().equals("")) {
+            integrals1000.setText("");
+            displayQuestion(4, 1);
+        }
+    }//GEN-LAST:event_integrals1000MouseClicked
+
+    private void relativeExtrema200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_relativeExtrema200MouseClicked
+        // TODO add your handling code here:
+        if(!relativeExtrema200.getText().equals("")) {
+            relativeExtrema200.setText("");
+            displayQuestion(0, 2);
+        }
+    }//GEN-LAST:event_relativeExtrema200MouseClicked
+
+    private void relativeExtrema400MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_relativeExtrema400MouseClicked
+        // TODO add your handling code here:
+        if(!relativeExtrema400.getText().equals("")) {
+            relativeExtrema400.setText("");
+            displayQuestion(1, 2);
+        }
+    }//GEN-LAST:event_relativeExtrema400MouseClicked
+
+    private void relativeExtrema600MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_relativeExtrema600MouseClicked
+        // TODO add your handling code here:
+        if(!relativeExtrema600.getText().equals("")) {
+            relativeExtrema600.setText("");
+            displayQuestion(2, 2);
+        }
+    }//GEN-LAST:event_relativeExtrema600MouseClicked
+
+    private void relativeExtrema800MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_relativeExtrema800MouseClicked
+        // TODO add your handling code here:
+        if(!relativeExtrema800.getText().equals("")) {
+            relativeExtrema800.setText("");
+            displayQuestion(3, 2);
+        }
+    }//GEN-LAST:event_relativeExtrema800MouseClicked
+
+    private void relativeExtrema1000MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_relativeExtrema1000MouseClicked
+        // TODO add your handling code here:
+        if(!relativeExtrema1000.getText().equals("")) {
+            relativeExtrema1000.setText("");
+            displayQuestion(4, 2);
+        }
+    }//GEN-LAST:event_relativeExtrema1000MouseClicked
+
+    private void concavity200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_concavity200MouseClicked
+        // TODO add your handling code here:
+        if(!concavity200.getText().equals("")) {
+            concavity200.setText("");
+            displayQuestion(0, 3);
+        }
+    }//GEN-LAST:event_concavity200MouseClicked
+
+    private void concavity400MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_concavity400MouseClicked
+        // TODO add your handling code here:
+        if(!concavity400.getText().equals("")) {
+            concavity400.setText("");
+            displayQuestion(1, 3);
+        }
+    }//GEN-LAST:event_concavity400MouseClicked
+
+    private void concavity600MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_concavity600MouseClicked
+        // TODO add your handling code here:
+        if(!concavity600.getText().equals("")) {
+            concavity600.setText("");
+            displayQuestion(2, 3);
+        }
+    }//GEN-LAST:event_concavity600MouseClicked
+
+    private void concavity800MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_concavity800MouseClicked
+        // TODO add your handling code here:
+        if(!concavity800.getText().equals("")) {
+            concavity800.setText("");
+            displayQuestion(3, 3);
+        }
+    }//GEN-LAST:event_concavity800MouseClicked
+
+    private void concavity1000MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_concavity1000MouseClicked
+        // TODO add your handling code here:
+        if(!concavity1000.getText().equals("")) {
+            concavity1000.setText("");
+            displayQuestion(4, 3);
+        }
+    }//GEN-LAST:event_concavity1000MouseClicked
     
     public void displayQuestion(int cost, int category) {
-        CalculusJeopardy.frame2.question.setText(CalculusJeopardy.questions[cost][category]);
+        CalculusJeopardy.currentQuestion[0] = cost;
+        CalculusJeopardy.currentQuestion[1] = category;
+        CalculusJeopardy.totalQuestions++;
+        CalculusJeopardy.frame2.question.setText("<html><center>" + CalculusJeopardy.questions[cost][category] + "</center></html>");
         CalculusJeopardy.frame2.setVisible(true);
     }
     

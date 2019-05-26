@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/root/NetBeansProjects/calculus-jeopardy/CalculusJeopardy/src/calculusjeopardy/MainJeopardyUI.java</file>
-            <file>file:/root/NetBeansProjects/calculus-jeopardy/CalculusJeopardy/src/calculusjeopardy/CalculusJeopardy.java</file>
-            <file>file:/root/NetBeansProjects/calculus-jeopardy/CalculusJeopardy/src/calculusjeopardy/QuestionUI.java</file>
+            <file>file:/root/NetBeansProjects/CalculusJeopardy/src/calculusjeopardy/MainJeopardyUI.java</file>
+            <file>file:/root/NetBeansProjects/CalculusJeopardy/src/calculusjeopardy/ScoresUI.java</file>
+            <file>file:/root/NetBeansProjects/CalculusJeopardy/src/calculusjeopardy/CalculusJeopardy.java</file>
+            <file>file:/root/NetBeansProjects/CalculusJeopardy/src/calculusjeopardy/QuestionUI.java</file>
         </group>
     </open-files>
 </project-private>

@@ -200,6 +200,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$200&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="relativeExtrema200MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="concavity200">
           <Properties>
@@ -216,6 +219,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$200&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="concavity200MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="derivatives400">
           <Properties>
@@ -232,6 +238,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$400&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="derivatives400MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="integrals400">
           <Properties>
@@ -248,6 +257,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$400&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="integrals400MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="relativeExtrema400">
           <Properties>
@@ -264,6 +276,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$400&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="relativeExtrema400MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="concavity400">
           <Properties>
@@ -280,6 +295,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$400&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="concavity400MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="derivatives600">
           <Properties>
@@ -296,6 +314,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$600&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="derivatives600MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="integrals600">
           <Properties>
@@ -312,6 +333,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$600&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="integrals600MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="relativeExtrema600">
           <Properties>
@@ -328,6 +352,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$600&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="relativeExtrema600MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="concavity600">
           <Properties>
@@ -344,6 +371,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$600&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="concavity600MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="derivatives800">
           <Properties>
@@ -360,6 +390,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$800&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="derivatives800MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="integrals800">
           <Properties>
@@ -376,6 +409,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$800&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="integrals800MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="relativeExtrema800">
           <Properties>
@@ -392,6 +428,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$800&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="relativeExtrema800MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="concavity800">
           <Properties>
@@ -408,6 +447,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$800&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="concavity800MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="derivatives1000">
           <Properties>
@@ -424,6 +466,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$1000&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="derivatives1000MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="integrals1000">
           <Properties>
@@ -440,6 +485,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$1000&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="integrals1000MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="relativeExtrema1000">
           <Properties>
@@ -456,6 +504,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$1000&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="relativeExtrema1000MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="concavity1000">
           <Properties>
@@ -472,6 +523,9 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;font-family: impact;&quot;&gt;$1000&lt;/span&gt;&lt;/html&gt;"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="concavity1000MouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
